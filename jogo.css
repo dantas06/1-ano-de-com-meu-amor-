@@ -1,0 +1,92 @@
+/* Estilização global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fce4ec, #e1bee7);
+    color: #4a148c;
+    text-align: center;
+    overflow-x: hidden; /* Impede que a barra de rolagem horizontal apareça */
+}
+
+/* Container do jogo */
+.game-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ba68c8;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Corações */
+#hearts {
+    color: #ff4081;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Exibição da palavra */
+#word-display {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: 600;
+    letter-spacing: 10px; /* Ajusta o espaçamento entre as letras */
+    word-spacing: 20px;  /* Espaço entre as palavras */
+    display: inline-block;
+}
+
+/* Estilo do input */
+input {
+    padding: 12px;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    border: 2px solid #ba68c8;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #8e24aa;
+    outline: none;
+}
+
+/* Botão de adivinhar */
+button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #ba68c8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e24aa;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Mensagens */
+#message {
+    font-size: 1.5rem;
+    color: #ff4081;
+    margin-top: 20px;
+    font-weight: 600;
+}

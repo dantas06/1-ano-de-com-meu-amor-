@@ -1,0 +1,152 @@
+/* Estilização global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fce4ec, #e1bee7);
+    color: #4a148c;
+    text-align: center;
+    overflow-x: hidden; /* Impede que a barra de rolagem horizontal apareça */
+}
+
+/* Cabeçalho */
+header {
+    padding: 50px 30px;
+    color: #fff;
+    background: linear-gradient(135deg, #ba68c8, #8e24aa);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #d1c4e9;
+    border-radius: 0 0 20px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    margin-top: 12px;
+    font-style: italic;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Texto */
+.texto {
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d1c4e9;
+    transition: all 0.3s ease-in-out;
+}
+
+.texto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.texto p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Carrossel */
+.carrossel-container {
+    position: relative;
+    max-width: 650px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ba68c8;
+    height: 400px; /* Define a altura do carrossel como fixa */
+}
+
+.carrossel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%; /* Define a altura das imagens para preencher o contêiner */
+    object-fit: cover; /* Garante que as imagens cubram toda a área do carrossel, mantendo a proporção */
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.botoes {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background: rgba(186, 104, 200, 0.8);
+    border: none;
+    font-size: 2.2rem;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #8e24aa;
+    color: #ffd740;
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    background: linear-gradient(135deg, #8e24aa, #ba68c8);
+    color: #fff;
+    padding: 25px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .carrossel-container {
+        max-width: 90%;
+    }
+
+    .texto {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

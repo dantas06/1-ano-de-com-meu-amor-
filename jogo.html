@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Amor</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jogo do Amor</h1>
+        <p>Adivinhe a frase secreta!</p>
+        <p>Você tem <span id="hearts">3</span> corações!</p>
+        <div id="word-display"></div> <!-- Não definindo um valor inicial aqui -->
+        <input type="text" id="letter-input" maxlength="1" placeholder="Digite uma letra">
+        <button id="guess-button">Adivinhar</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
